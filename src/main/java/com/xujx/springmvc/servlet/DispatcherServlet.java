@@ -73,10 +73,8 @@ public class DispatcherServlet extends HttpServlet {
 
         Class clazz = clazzesMap.get(location);
 
-        UserController userController = (UserController) instanceMap.get(clazz);
-
         try {
-            method.invoke(userController);
+            method.invoke(instanceMap.get(clazz));
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
