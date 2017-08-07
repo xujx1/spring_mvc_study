@@ -40,9 +40,6 @@ public class DispatcherServlet extends HttpServlet {
 
     /**
      * 加载类配置
-     *
-     * @param config
-     * @throws ServletException
      */
     @Override
     public void init(ServletConfig config) throws ServletException {
